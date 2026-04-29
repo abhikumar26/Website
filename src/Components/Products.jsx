@@ -47,10 +47,10 @@ const Products = () => {
   return (
     <div style={{ position: "relative", padding: "20px" }}>
 
-      {/* 🔴 Title */}
+
       <h1 style={{ color: "red", fontSize: "60px" }}>TRENDS</h1>
 
-      {/* 🔍 Search (Top Right) */}
+   
       <input
         type="search"
         placeholder="Search products..."
@@ -95,7 +95,6 @@ const Products = () => {
 </div>
 
 
-      {/* 🛍 Products */}
       <div className="product-container">
         {products.length > 0 ? (
           products.map((item) => (

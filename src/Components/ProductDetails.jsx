@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Accountdetails from "./Accountdetails";
 
 const ProductDetails = () => {
   const { id } = useParams(); // get id directly
@@ -55,8 +56,8 @@ const ProductDetails = () => {
         <h3 className="price">₹{product.price}</h3>
 
         <div className="btn-group">
-          <button className="add-btn">Add to Cart</button>
-          <button className="buy-btn">Buy Now</button>
+          <button className="add-btn"onClick={()=>alert("The item added to card")}>Add to Cart</button>
+          <button className="buy-btn" onClick={()=>navigate("/account")}>Buy Now</button>
         </div>
       </div>
     </div>
