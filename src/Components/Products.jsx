@@ -68,13 +68,13 @@ const Products = () => {
         }}
       />
 
-     {/* 🔽 Sort (CENTER TOP CENTERED) */}
+   
 <div
   style={{
     position: "absolute",
-    top: "30px",          // distance from top
-    left: "50%",          // move to horizontal center
-    transform: "translateX(-50%)", // perfectly center horizontally
+    top: "30px",
+    left: "50%",        
+    transform: "translateX(-50%)", 
   }}
 >
   <select

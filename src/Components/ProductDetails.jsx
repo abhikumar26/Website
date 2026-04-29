@@ -3,13 +3,13 @@ import { useNavigate, useParams } from "react-router-dom";
 import Accountdetails from "./Accountdetails";
 
 const ProductDetails = () => {
-  const { id } = useParams(); // get id directly
+  const { id } = useParams(); 
   const navigate = useNavigate();
 
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Fetch single product
+ 
   const getProduct = async () => {
     try {
       const res = await fetch(`https://fakestoreapi.com/products/${id}`);
@@ -26,17 +26,17 @@ const ProductDetails = () => {
     getProduct();
   }, [id]);
 
-  // Navigate back
+ 
   const handleBack = () => {
     navigate("/");
   };
 
-  // Loading state
+ 
   if (loading) {
     return <h2 style={{ textAlign: "center" }}>Loading...</h2>;
   }
 
-  // No product found
+ 
   if (!product) {
     return <h2 style={{ textAlign: "center" }}>Product not found</h2>;
   }
